@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <title>Sample Blog</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.pagetop').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 300);
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#top" class="pagetop"><i class="fas fa-angle-up"></i></a>
+    <header>
+        <a href="index.html" class="header__title">Sample Blog</a>
+        <p class="header__text">ここに簡単な説明文を入れる</p>
+    </header>
+    <section class="page-info">
+        <h2 class="page-info__title"><span class="page-info__label"><i class="fas fa-tag"></i>HTML</span>の記事一覧</h2>
+    </section>
+    <section class="article__area">
+        <div class="article__inner">
+            <a href="#" class="article-card">
+                <div class="article-card__image"><img src="./images/img01.png" alt=""></div>
+                <div class="article-card__body">
+                    <p class="article-card__date"><time>2018年4月9日</time></p>
+                    <p class="article-card__category">フロントエンド</p>
+                    <h3 class="article-card__title">フロントエンドのトレンド情報とこれから来る技術予測</h3>
+                    <p class="article-card__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+            </a>
+            <a href="article.html" class="article-card">
+                <div class="article-card__image"><img src="./images/img02.png" alt=""></div>
+                <div class="article-card__body">
+                    <p class="article-card__date"><time>2018年4月9日</time></p>
+                    <p class="article-card__category">フロントエンド</p>
+                    <h3 class="article-card__title">フロントエンドのトレンド情報とこれから来る技術予測</h3>
+                    <p class="article-card__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+            </a>
+            <a href="article.html" class="article-card">
+                <div class="article-card__image"><img src="./images/img04.png" alt=""></div>
+                <div class="article-card__body">
+                    <p class="article-card__date"><time>2018年4月9日</time></p>
+                    <p class="article-card__category">フロントエンド</p>
+                    <h3 class="article-card__title">フロントエンドのトレンド情報とこれから来る技術予測</h3>
+                    <p class="article-card__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+            </a>
+            <a href="article.html" class="article-card">
+                <div class="article-card__image"><img src="./images/img01.png" alt=""></div>
+                <div class="article-card__body">
+                    <p class="article-card__date"><time>2018年4月9日</time></p>
+                    <p class="article-card__category">フロントエンド</p>
+                    <h3 class="article-card__title">フロントエンドのトレンド情報とこれから来る技術予測</h3>
+                    <p class="article-card__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+            </a>
+            <a href="article.html" class="article-card">
+                <div class="article-card__image"><img src="./images/img02.png" alt=""></div>
+                <div class="article-card__body">
+                    <p class="article-card__date"><time>2018年4月9日</time></p>
+                    <p class="article-card__category">フロントエンド</p>
+                    <h3 class="article-card__title">フロントエンドのトレンド情報とこれから来る技術予測</h3>
+                    <p class="article-card__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+            </a>
+        </div>
+        <ul class="pager">
+            <li class="pager__back"><a href="#" class="is-disabled">前へ</a></li>
+            <li class="pager__count">1/100ページ</li>
+            <li class="pager__next"><a href="#">次へ</a></li>
+        </ul>
+    </section>
+    <footer>
+        <div class="footer__content">
+            <p class="footer__title"><a href="index.html">Sample Blog</a></p>
+            <p class="footer-sns__title">SNSやRSSで購読することができます</p>
+            <ul class="footer-sns__list">
+                <li class="footer-sns__item"><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                <li class="footer-sns__item"><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="footer-sns__item"><a href="#" class="rss"><i class="fas fa-rss"></i></a></li>
+            </ul>
+        </div>
+        <small> &copy; Sample Blog</small>
+    </footer>
+</body>
+</html>
