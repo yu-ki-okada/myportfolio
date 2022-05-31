@@ -1,0 +1,3557 @@
+@charset "UTF-8";
+@-webkit-keyframes zoomUp {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+}
+
+@keyframes zoomUp {
+  /* 1.15倍させる指定 */
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+}
+
+/* ========================================
+            トップページ
+========================================= */
+/* ========================================
+            モーダルウィンドウ
+========================================= */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 550px;
+  height: 600px;
+  background-color: #FFFFFF;
+  border: 1px solid #707070;
+  z-index: 22;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+}
+
+.modal__content {
+  width: 100%;
+  height: 100%;
+}
+
+.modal__content .modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+.modal__content .modal__wrapper .modal__inner {
+  width: 429px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 29px;
+}
+
+.modal__content .modal__wrapper .modal__inner .modal__title {
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding-bottom: 29px;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.modal__content .modal__wrapper .modal__inner .form {
+  width: 100%;
+  height: auto;
+  padding-top: 35.5px;
+}
+
+.modal__content .modal__wrapper .modal__inner .form label {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.modal__content .modal__wrapper .modal__inner .form label .plan--small {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.modal__content .modal__wrapper .modal__inner .form label .sp {
+  display: none;
+}
+
+.modal__content .modal__wrapper .modal__inner .form input {
+  width: 100%;
+  font-size: 14px;
+  height: 34px;
+  margin: 14px 0;
+  border: 1px solid #E7E7E7;
+  padding: 9px 0 9px 10px;
+}
+
+.modal__content .modal__wrapper .modal__inner .form .flatpickr {
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.modal__content .modal__wrapper .modal__inner .form .choice {
+  font-size: 14px;
+  width: 100%;
+  height: 34px;
+  margin: 14px 0;
+  color: #797878;
+  border: 1px solid #E7E7E7;
+  padding: 9px 0 9px 10px;
+}
+
+.modal__content .modal__wrapper .modal__inner .form .btn__submit {
+  font-size: 16px;
+  display: block;
+  margin: 64px auto 0 auto;
+  padding: 13px 67px;
+  border: 1px solid #707070;
+  height: 42px;
+}
+
+.modal__content .modal__wrapper .js-close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 20px;
+  right: 22px;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    left: 48%;
+    width: calc(100% - 50px);
+  }
+  .modal .modal__content .modal__wrapper .modal__inner {
+    width: calc(100% - 20px);
+  }
+  .modal .modal__content .modal__wrapper .modal__inner .form .sp {
+    display: block;
+  }
+}
+
+/* ========================================
+                ヘッダー
+========================================= */
+.header-top, .header-top.scroll-nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 80px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 20;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+}
+
+.header-top .header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 350px;
+}
+
+.header-top .header__inner .header__img {
+  margin: 20px 120px 20px 20px;
+}
+
+.header-top .header__inner .global-nav {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .header-top .header__inner .global-nav {
+    font-size: 13px;
+  }
+}
+
+.header-top .header__inner .global-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-top .header__inner .global-nav__list .global-nav__item {
+  margin-right: 30px;
+}
+
+.header-top .btn__reserve {
+  color: #FFFFFF;
+  font-size: 16px;
+  width: 170px;
+  height: 54px;
+  margin: auto 20px;
+  line-height: 54px;
+  padding-left: 69px;
+  background: #978F10 url(../img/calender.png) no-repeat;
+  background-position: left 37px top 16px;
+  background-size: 22px;
+}
+
+.header-top .btn__js {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  width: 48px;
+  height: 48px;
+  z-index: 20;
+  border: none;
+}
+
+.header-top .btn__js .btn__line {
+  display: block;
+  position: relative;
+  width: 70%;
+  height: 2px;
+  background-color: #FFFFFF;
+  -webkit-transition: .2s;
+  transition: .2s;
+  top: 0px;
+  right: -5px;
+}
+
+.header-top .btn__js .btn__line::before, .header-top .btn__js .btn__line::after {
+  content: "";
+  position: absolute;
+  right: 0.5px;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+  margin-top: 3px;
+}
+
+.header-top .btn__js .btn__line::after {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+  margin-top: -3px;
+}
+
+.header-top .btn__js .btn__line.open {
+  background-color: transparent;
+}
+
+.header-top .btn__js .btn__line.open::before, .header-top .btn__js .open.btn__line::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: 0;
+  background-color: red;
+}
+
+.header-top .btn__js .btn__line.open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 0;
+  background-color: red !important;
+}
+
+@media (min-width: 768px) {
+  .header-top .btn__js {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-top, .header-top.scroll-nav {
+    height: 60px;
+    display: block;
+  }
+  .header-top .header__inner {
+    height: 60px;
+    line-height: 60px;
+    display: block;
+  }
+  .header-top .header__inner .header__logo {
+    width: 30%;
+  }
+  .header-top .header__inner .header__logo .header__img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0 20px 5px;
+  }
+  .header-top .header__inner .global-nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .header-top .header__inner .global-nav.open {
+    right: 0px;
+    top: 0;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    padding-top: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .header-top .header__inner .global-nav.open .global-nav__list {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 26px;
+  }
+  .header-top .header__inner .global-nav.open .global-nav__list .global-nav__item {
+    margin-right: 0;
+  }
+  .header-top .btn__reserve {
+    position: absolute;
+    right: 15%;
+    top: 15px;
+    width: 100px;
+    height: 35px;
+    margin: auto 10px;
+    line-height: 35px;
+    padding-left: 35px;
+    background-position: left 12px top 10px;
+    background-size: 16px;
+  }
+  .header-top .btn__reserve .btn__link {
+    font-size: 13px;
+  }
+}
+
+.scroll-nav.header-top {
+  background-color: #FFFFFF;
+}
+
+.scroll-nav.header-top .global-nav__link {
+  color: #000000;
+}
+
+.scroll-nav.header-top .btn__line {
+  background-color: #000000;
+}
+
+.scroll-nav.header-top .btn__line::before, .scroll-nav.header-top .btn__js .btn__line::after, .header-room .btn__js .scroll-nav.header-top .btn__line::after, .header-cooking .btn__js .scroll-nav.header-top .btn__line::after, .header-hot-spring .btn__js .scroll-nav.header-top .btn__line::after, .scroll-nav.header-top .btn__line::after {
+  background-color: #000000;
+}
+
+@media (max-width: 767px) {
+  .scroll-nav.header-top .global-nav__link {
+    color: #FFFFFF;
+  }
+}
+
+/* ========================================
+            メインビジュアル
+========================================= */
+.main-top {
+  width: 100%;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+  /* ========================================
+                    全体紹介
+    ========================================= */
+  /* ========================================
+                お部屋について
+    ========================================= */
+  /* ========================================
+                料理について
+    ========================================= */
+  /* ========================================
+                温泉について
+    ========================================= */
+  /* ========================================
+                おすすめご宿泊プラン
+    ========================================= */
+  /* ========================================
+                    お知らせ
+    ========================================= */
+  /* ========================================
+                    アクセス
+    ========================================= */
+}
+
+.main-top .overall {
+  width: 100%;
+}
+
+.main-top .overall__body {
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+  height: auto;
+  position: relative;
+}
+
+.main-top .overall__body .overall__title {
+  color: #FFFFFF;
+  font-size: 34px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 362px;
+  right: 26%;
+  z-index: 8;
+}
+
+.main-top .overall__body .overall__title--left {
+  position: relative;
+  right: 51px;
+}
+
+.main-top .overall__body .swiper-slide {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.main-top .overall__body .swiper-slide .slide-img {
+  background-position: top -90px center;
+  height: 1079px;
+  /* 1079pxの高さで表示させる */
+}
+
+.main-top .overall__body .swiper-slide-active .slide-img {
+  -webkit-animation: zoomUp 12s linear 0s;
+          animation: zoomUp 12s linear 0s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.main-top .overall__body .swiper-slide-duplicate-active .slide-img {
+  -webkit-animation: zoomUp 12s linear 0s;
+          animation: zoomUp 12s linear 0s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.main-top .overall__body .swiper-slide-prev .slide-img {
+  -webkit-animation: zoomUp 12s linear 0s;
+          animation: zoomUp 12s linear 0s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.main-top .overall__text {
+  width: 100%;
+  height: 681px;
+  background: url(../img/bg.jpg) no-repeat;
+}
+
+.main-top .overall__text .overall__inner {
+  width: 70%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 149px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-orientation: upright;
+}
+
+.main-top .overall__text .overall__inner .inner__title {
+  font-size: 28px;
+  letter-spacing: 20px;
+  margin-left: 118px;
+  line-height: 2;
+}
+
+.main-top .overall__text .overall__inner .inner__title--right {
+  margin-top: -85px;
+}
+
+.main-top .overall__text .overall__inner .inner__text {
+  font-size: 16px;
+  letter-spacing: 6.5px;
+  line-height: 2;
+  margin-left: 118px;
+}
+
+.main-top .overall__text .overall__inner .inner__text--name {
+  font-size: 22px;
+  margin-top: 293px;
+  letter-spacing: 12px;
+}
+
+@media (max-width: 1000px) and (max-width: 767px) {
+  .main-top .overall .overall__body {
+    height: 600px;
+  }
+  .main-top .overall .overall__body .overall__title {
+    font-size: 30px;
+    position: absolute;
+    top: 180px;
+    right: 33%;
+  }
+  .main-top .overall .overall__body .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .main-top .overall .overall__body .swiper-container .swiper-slide .slide-img {
+    background-position: top -60px center;
+    height: 110%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-top .overall .overall__text {
+    height: auto;
+    background-size: cover;
+  }
+  .main-top .overall .overall__text .overall__inner {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    padding: 45px 0;
+  }
+  .main-top .overall .overall__text .overall__inner .inner__title {
+    margin: 0 auto;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 2;
+  }
+  .main-top .overall .overall__text .overall__inner .inner__title--right {
+    position: static;
+  }
+  .main-top .overall .overall__text .overall__inner .inner__text {
+    margin: 35px auto 0 auto;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+  }
+  .main-top .overall .overall__text .overall__inner .inner__text--name {
+    margin-top: 35px;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1000px) and (max-width: 767px) {
+  .main-top .overall .overall__text .overall__inner .inner__title {
+    font-size: 25px;
+    margin: 0;
+  }
+  .main-top .overall .overall__text .overall__inner .inner__text {
+    margin-right: 0;
+    margin-left: 25px;
+    font-size: 14px;
+  }
+  .main-top .overall .overall__text .overall__inner .inner__text--name {
+    text-align: end;
+  }
+}
+
+.main-top .room {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-top .room__thumb {
+  width: 55%;
+  margin-top: 106px;
+}
+
+.main-top .room__thumb .room__img {
+  width: 100%;
+  max-width: 1050px;
+}
+
+.main-top .room__wrapper {
+  margin-left: 137px;
+  margin-top: 138px;
+  width: 45%;
+  max-width: 432px;
+}
+
+.main-top .room__wrapper .room__title {
+  font-size: 36px;
+  line-height: 1.72;
+  margin-bottom: 75px;
+}
+
+.main-top .room__wrapper .room__text {
+  font-size: 16px;
+  line-height: 2;
+  height: auto;
+  margin-bottom: 75px;
+}
+
+.main-top .room__wrapper .room__button {
+  border: 1px solid #707070;
+  text-align: center;
+  width: 200px;
+  height: 56px;
+}
+
+.main-top .room__wrapper .room__button .room__link {
+  font-size: 16px;
+  display: block;
+  height: 100%;
+  padding: 18px 0;
+}
+
+@media (max-width: 767px) {
+  .main-top .room {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 80px;
+    position: relative;
+  }
+  .main-top .room .room__thumb {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+  }
+  .main-top .room .room__thumb .room__img {
+    height: 600px;
+    -o-object-fit: none;
+       object-fit: none;
+    -o-object-position: 50% 20%;
+       object-position: 50% 20%;
+  }
+  .main-top .room .room__wrapper {
+    margin-left: 0;
+    margin-top: 0;
+    width: 60%;
+    color: white;
+    position: absolute;
+    top: 140px;
+    left: 10px;
+    text-shadow: 1px 2px 3px #000000;
+  }
+  .main-top .room .room__wrapper .room__title {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+  .main-top .room .room__wrapper .room__text {
+    font-size: 13px;
+    margin-bottom: 50px;
+  }
+  .main-top .room .room__wrapper .room__text .pc {
+    display: none;
+  }
+  .main-top .room .room__wrapper .room__button {
+    border: 1px solid #E7E7E7;
+  }
+  .main-top .room .room__wrapper .room__button .room__link {
+    text-shadow: 1px 2px 3px #000000;
+  }
+}
+
+.main-top .cooking {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main-top .cooking__wrapper {
+  margin-top: 175px;
+  width: 45%;
+  margin-right: 174px;
+  max-width: 288px;
+}
+
+.main-top .cooking__wrapper .cooking__title {
+  font-size: 36px;
+  line-height: 1.72;
+  margin-bottom: 75px;
+}
+
+.main-top .cooking__wrapper .cooking__text {
+  font-size: 16px;
+  line-height: 2;
+  height: auto;
+  margin-bottom: 43px;
+}
+
+.main-top .cooking__wrapper .cooking__button {
+  border: 1px solid #707070;
+  text-align: center;
+  width: 200px;
+  height: 56px;
+}
+
+.main-top .cooking__wrapper .cooking__button .cooking__link {
+  font-size: 16px;
+  display: block;
+  height: 100%;
+  padding: 18px 0;
+}
+
+.main-top .cooking__thumb {
+  width: 55%;
+  margin-top: 122px;
+}
+
+.main-top .cooking__thumb .cooking__img {
+  width: 100%;
+  max-width: 1050px;
+}
+
+@media (max-width: 767px) {
+  .main-top .cooking {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+    position: relative;
+  }
+  .main-top .cooking .cooking__wrapper {
+    margin-top: 0;
+    width: 70%;
+    margin-right: 0;
+    color: white;
+    position: absolute;
+    top: 140px;
+    left: 10px;
+    text-shadow: 1px 2px 3px #000000;
+  }
+  .main-top .cooking .cooking__wrapper .cooking__title {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+  .main-top .cooking .cooking__wrapper .cooking__text {
+    font-size: 13px;
+  }
+  .main-top .cooking .cooking__wrapper .cooking__button {
+    border: 1px solid #E7E7E7;
+  }
+  .main-top .cooking .cooking__wrapper .cooking__button .cooking__link {
+    text-shadow: 1px 2px 3px #000000;
+  }
+  .main-top .cooking .cooking__thumb {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+  }
+  .main-top .cooking .cooking__thumb .cooking__img {
+    height: 600px;
+    -o-object-fit: none;
+       object-fit: none;
+    -o-object-position: 50% 20%;
+       object-position: 50% 20%;
+  }
+}
+
+.main-top .hot-spring {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-top .hot-spring__thumb {
+  width: 55%;
+  margin-top: 122px;
+}
+
+.main-top .hot-spring__thumb .hot-spring__img {
+  width: 100%;
+  max-width: 1050px;
+}
+
+.main-top .hot-spring__wrapper {
+  margin-left: 137px;
+  margin-top: 154px;
+  width: 45%;
+  max-width: 468px;
+}
+
+.main-top .hot-spring__wrapper .hot-spring__title {
+  font-size: 36px;
+  line-height: 1.72;
+  margin-bottom: 75px;
+}
+
+.main-top .hot-spring__wrapper .hot-spring__text {
+  font-size: 16px;
+  line-height: 2;
+  height: auto;
+  margin-bottom: 75px;
+}
+
+.main-top .hot-spring__wrapper .hot-spring__button {
+  border: 1px solid #707070;
+  text-align: center;
+  width: 200px;
+  height: 56px;
+}
+
+.main-top .hot-spring__wrapper .hot-spring__button .hot-spring__link {
+  font-size: 16px;
+  display: block;
+  height: 100%;
+  padding: 18px 0;
+}
+
+@media (max-width: 767px) {
+  .main-top .hot-spring {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+    position: relative;
+  }
+  .main-top .hot-spring .hot-spring__thumb {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+  }
+  .main-top .hot-spring .hot-spring__thumb .hot-spring__img {
+    height: 600px;
+    -o-object-fit: none;
+       object-fit: none;
+    -o-object-position: 50% 20%;
+       object-position: 50% 20%;
+  }
+  .main-top .hot-spring .hot-spring__wrapper {
+    margin-left: 0;
+    margin-top: 0;
+    width: 70%;
+    color: white;
+    position: absolute;
+    top: 140px;
+    left: 10px;
+    text-shadow: 1px 2px 3px #000000;
+  }
+  .main-top .hot-spring .hot-spring__wrapper .hot-spring__title {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+  .main-top .hot-spring .hot-spring__wrapper .hot-spring__text {
+    font-size: 13px;
+    margin-bottom: 50px;
+  }
+  .main-top .hot-spring .hot-spring__wrapper .hot-spring__text .pc {
+    display: none;
+  }
+  .main-top .hot-spring .hot-spring__wrapper .hot-spring__button {
+    border: 1px solid #E7E7E7;
+  }
+  .main-top .hot-spring .hot-spring__wrapper .hot-spring__button .hot-spring__link {
+    text-shadow: 1px 2px 3px #000000;
+  }
+}
+
+.main-top .plan {
+  width: 100%;
+  background: url(../img/bg02.jpg) no-repeat;
+  text-align: center;
+  padding-bottom: 144px;
+  margin-top: 78px;
+}
+
+.main-top .plan .logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.main-top .plan__title {
+  font-size: 36px;
+  margin-bottom: 66px;
+}
+
+.main-top .plan__inner {
+  max-width: 1180px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-top .plan__inner .plan-article {
+  max-width: 331px;
+  width: 40%;
+}
+
+.main-top .plan__inner .plan-article__thumb {
+  width: 100%;
+}
+
+.main-top .plan__inner .plan-article__thumb .plan-article__img {
+  width: 100%;
+  max-width: 331px;
+}
+
+.main-top .plan__inner .plan-article__body {
+  margin-top: 32px;
+  text-align: left;
+}
+
+.main-top .plan__inner .plan-article__body .plan-article__title {
+  font-size: 20px;
+  margin-bottom: 36px;
+}
+
+.main-top .plan__inner .plan-article__body .plan-article__text {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.main-top .plan__inner .plan-article:nth-of-type(3) {
+  max-width: 336px;
+}
+
+.main-top .plan__inner .plan-article:nth-of-type(3) .plan-article__title {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+  .main-top .plan__inner {
+    width: calc(100% - 10px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-top .plan__inner .plan-article {
+    max-width: 767px;
+    width: 100%;
+  }
+  .main-top .plan__inner .plan-article__thumb {
+    width: 100%;
+  }
+  .main-top .plan__inner .plan-article__thumb .plan-article__img {
+    width: 100%;
+    max-width: 767px;
+  }
+  .main-top .plan__inner .plan-article__body .plan-article__title {
+    font-size: 18px;
+  }
+  .main-top .plan__inner .plan-article__body .plan-article__text {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 60px;
+  }
+  .main-top .plan__inner .plan-article__body .plan-article__text .pc {
+    display: none;
+  }
+  .main-top .plan__inner .plan-article:nth-of-type(3) {
+    max-width: initial;
+  }
+  .main-top .plan__inner .plan-article:nth-of-type(3) .plan-article__text {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-top .plan {
+    background: url(../img/bg02.jpg);
+    margin-top: 60px;
+  }
+  .main-top .plan .plan__title {
+    font-size: 30px;
+  }
+}
+
+.main-top .notice {
+  width: 100%;
+  text-align: center;
+}
+
+.main-top .notice .logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.main-top .notice__title {
+  font-size: 36px;
+  margin-bottom: 46px;
+}
+
+.main-top .notice__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+}
+
+.main-top .notice__list .notice__item:nth-child(1) {
+  margin-right: 53px;
+}
+
+.main-top .notice__list .notice__item:hover {
+  cursor: pointer;
+}
+
+.main-top .notice__list .notice__item.active {
+  text-decoration: underline;
+}
+
+.main-top .notice__inner.show {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 49px;
+}
+
+.main-top .notice__inner.show .notice__wrapper {
+  width: 570px;
+  height: auto;
+}
+
+.main-top .notice__inner.show .notice__wrapper:nth-of-type(1) {
+  margin-right: 46px;
+}
+
+.main-top .notice__inner.show .notice__wrapper:nth-of-type(1) .notice-article {
+  width: 100%;
+  height: 130px;
+}
+
+.main-top .notice__inner.show .notice__wrapper:nth-of-type(1) .notice-article:nth-of-type(2n-1) {
+  background: url(../img/news01.jpg) no-repeat 10px 15px;
+  background-size: 103px 100px;
+  background-color: #F6F6F6;
+}
+
+.main-top .notice__inner.show .notice__wrapper:nth-of-type(1) .notice-article:nth-of-type(2n) {
+  background: url(../img/news02.jpg) no-repeat 10px 15px;
+  background-size: 103px 100px;
+  background-color: #F6F6F6;
+}
+
+.main-top .notice__inner.show .notice__wrapper:nth-of-type(2) .notice-article {
+  width: 100%;
+  height: 130px;
+}
+
+.main-top .notice__inner.show .notice__wrapper:nth-of-type(2) .notice-article:nth-of-type(2n-1) {
+  background: url(../img/news02.jpg) no-repeat 10px 15px;
+  background-size: 103px 100px;
+  background-color: #F6F6F6;
+}
+
+.main-top .notice__inner.show .notice__wrapper:nth-of-type(2) .notice-article:nth-of-type(2n) {
+  background: url(../img/news01.jpg) no-repeat 10px 15px;
+  background-size: 103px 100px;
+  background-color: #F6F6F6;
+}
+
+.main-top .notice__inner.show .notice__wrapper .notice-article {
+  background-color: #F6F6F6;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.main-top .notice__inner.show .notice__wrapper .notice-article:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.main-top .notice__inner.show .notice__wrapper .notice-article__date {
+  font-size: 14px;
+  position: absolute;
+  top: 15px;
+  left: 143px;
+}
+
+.main-top .notice__inner.show .notice__wrapper .notice-article__text {
+  font-size: 16px;
+  position: absolute;
+  top: 39px;
+  left: 143px;
+  text-align: left;
+  line-height: 2;
+}
+
+.main-top .notice__inner {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .main-top .notice .notice__inner.show {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper {
+    width: calc(100% - 10px);
+    margin: 0 auto;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper:nth-of-type(1) {
+    margin-bottom: 20px;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper:nth-of-type(1) .notice-article {
+    height: 100px;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper:nth-of-type(1) .notice-article:nth-of-type(2n-1) {
+    background-size: 73px 70px;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper:nth-of-type(1) .notice-article:nth-of-type(2n) {
+    background-size: 73px 70px;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper:nth-of-type(2) .notice-article {
+    height: 100px;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper:nth-of-type(2) .notice-article:nth-of-type(2n-1) {
+    background-size: 73px 70px;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper:nth-of-type(2) .notice-article:nth-of-type(2n) {
+    background-size: 73px 70px;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper .notice-article__date {
+    font-size: 12px;
+    left: 90px;
+  }
+  .main-top .notice .notice__inner.show .notice__wrapper .notice-article__text {
+    font-size: 14px;
+    top: 35px;
+    left: 90px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-top .notice .pc {
+    display: none;
+  }
+}
+
+.main-top .access {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 60px;
+}
+
+.main-top .access .logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.main-top .access__title {
+  font-size: 36px;
+}
+
+.main-top .access__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  max-width: 1180px;
+  margin-bottom: 69px;
+}
+
+.main-top .access__inner .access__pict {
+  width: 73%;
+  max-width: 656px;
+  max-height: 370px;
+  height: auto;
+  margin-top: calc(240px - 156px);
+}
+
+.main-top .access__inner .access__pict .access__img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-top .access__inner .access__body {
+  width: 44%;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 83px;
+  margin-top: calc(260px - 156px);
+}
+
+@media (max-width: 890px) {
+  .main-top .access__inner .access__body {
+    font-size: 12px;
+  }
+}
+
+.main-top .access__inner .access__body .access__category {
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.main-top .access__inner .access__body .access__text {
+  margin-bottom: 24px;
+}
+
+.main-top .access__inner .access__body .access__address .access__text {
+  line-height: 2;
+}
+
+.main-top .access__remarks {
+  width: 35%;
+  margin-left: 58%;
+  margin-top: -133px;
+  line-height: 2;
+  text-align: left;
+}
+
+@media (max-width: 1150px) {
+  .main-top .access__remarks {
+    margin-left: 70%;
+    font-size: 12px;
+    width: 25%;
+  }
+  .main-top .access__remarks .pc {
+    display: none;
+  }
+}
+
+.main-top .access .map__wrap {
+  max-width: 50%;
+  margin: 69px auto 0 auto;
+}
+
+.main-top .access .map__wrap .access__map {
+  height: 0;
+  width: 100%;
+  max-width: 792px;
+  position: relative;
+  padding-top: 74.75%;
+  margin: 0 auto;
+}
+
+.main-top .access .map__wrap .access__map .access__frame {
+  padding-bottom: 110px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .main-top .access .access__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: calc(100% - 10px);
+  }
+  .main-top .access .access__inner .access__pict {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .main-top .access .access__inner .access__pict .access__img {
+    width: 80%;
+  }
+  .main-top .access .access__inner .access__body {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 25px;
+  }
+  .main-top .access .access__inner .access__body .access__category {
+    margin-bottom: 5px;
+  }
+  .main-top .access .access__inner .access__body .access__text {
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+  .main-top .access .access__remarks {
+    margin-left: 0;
+    width: calc(100% - 10px);
+    margin-top: -50px;
+  }
+  .main-top .access .access__remarks .pc {
+    display: none;
+  }
+  .main-top .access .map__wrap {
+    max-width: initial;
+    margin-top: 69px;
+    padding-bottom: 50px;
+  }
+  .main-top .access .map__wrap .access__map .access__frame {
+    padding-bottom: 0;
+  }
+}
+
+/* ========================================
+                フッター
+========================================= */
+.footer-top {
+  width: 100%;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+}
+
+.footer-top .footer__inner {
+  height: 522px;
+  margin: 0 auto;
+  background: url(../img/bg3.jpg) no-repeat;
+  background-size: cover;
+  padding: 64px 0 61px 0;
+}
+
+.footer-top .footer__inner .footer__nav {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-bottom: 96px;
+}
+
+.footer-top .footer__inner .footer__nav .footer__item {
+  margin-right: 34px;
+}
+
+.footer-top .footer__inner .footer__nav .footer__item:last-child {
+  margin-right: 0;
+}
+
+.footer-top .footer__inner .footer__logo {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.footer-top .footer__inner .footer__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 23px;
+  font-size: 16px;
+}
+
+.footer-top .footer__inner .footer__location .footer__post-code {
+  margin-right: 21px;
+}
+
+.footer-top .footer__inner .footer__location .footer__address {
+  letter-spacing: 2.88px;
+}
+
+.footer-top .footer__inner .footer__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+}
+
+.footer-top .footer__inner .footer__number .footer__tel {
+  margin-right: 20px;
+}
+
+.footer-top .footer__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  margin: auto 0;
+  font-size: 12px;
+}
+
+/* ========================================
+            下層ページ（お部屋）
+========================================= */
+/* ========================================
+                ヘッダー
+========================================= */
+.header-room {
+  width: 100%;
+  height: 80px;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 80px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 20;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+}
+
+.header-room .header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-room .header__inner .header__img {
+  margin: 20px 120px 20px 20px;
+  width: 100%;
+  max-width: 180px;
+}
+
+.header-room .header__inner .global-nav {
+  color: #000000;
+  font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .header-room .header__inner .global-nav {
+    font-size: 13px;
+  }
+}
+
+.header-room .header__inner .global-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-room .header__inner .global-nav__list .global-nav__item {
+  margin-right: 30px;
+}
+
+.header-room .btn__reserve {
+  color: #FFFFFF;
+  font-size: 16px;
+  width: 170px;
+  height: 54px;
+  margin: auto 20px;
+  line-height: 54px;
+  padding-left: 69px;
+  background: #978F10 url(../img/calender.png) no-repeat;
+  background-position: left 37px top 16px;
+  background-size: 22px;
+}
+
+.header-room .btn__js {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  width: 48px;
+  height: 48px;
+  z-index: 20;
+  border: none;
+  right: 0;
+}
+
+.header-room .btn__js .btn__line {
+  display: block;
+  position: relative;
+  width: 70%;
+  height: 2px;
+  background-color: #FFFFFF;
+  -webkit-transition: .2s;
+  transition: .2s;
+  top: 0px;
+  right: -5px;
+}
+
+.header-room .btn__js .btn__line::before, .header-room .btn__js .btn__line::after {
+  content: "";
+  position: absolute;
+  right: 0.5px;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+  margin-top: 3px;
+}
+
+.header-room .btn__js .btn__line::after {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+  margin-top: -3px;
+}
+
+.header-room .btn__js .btn__line.open {
+  background-color: transparent;
+}
+
+.header-room .btn__js .btn__line.open::before, .header-room .btn__js .open.btn__line::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: 0;
+  background-color: red;
+}
+
+.header-room .btn__js .btn__line.open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 0;
+  background-color: red !important;
+}
+
+@media (min-width: 768px) {
+  .header-room .btn__js {
+    display: none;
+  }
+}
+
+.header-room .btn__js .btn__line {
+  background-color: #000000;
+  top: 8px;
+}
+
+.header-room .btn__js .btn__line::before, .header-room .btn__js .btn__line::after {
+  background-color: #000000;
+}
+
+@media (max-width: 767px) {
+  .header-room {
+    display: block;
+  }
+  .header-room .header__inner {
+    display: block;
+    line-height: 80px;
+  }
+  .header-room .header__inner .header__img {
+    margin: 20px 0 20px 10px;
+    width: 40%;
+  }
+  .header-room .header__inner .global-nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .header-room .header__inner .global-nav.open {
+    right: 0px;
+    top: 0;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    padding-top: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .header-room .header__inner .global-nav.open .global-nav__list {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+  .header-room .header__inner .global-nav.open .global-nav__list .global-nav__item {
+    margin-right: 0;
+  }
+  .header-room .btn__reserve {
+    position: absolute;
+    right: 15%;
+    top: 25px;
+    width: 100px;
+    height: 35px;
+    margin: auto 10px;
+    line-height: 35px;
+    padding-left: 35px;
+    background-position: left 12px top 10px;
+    background-size: 16px;
+  }
+  .header-room .btn__reserve .btn__link {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+            メインビジュアル
+========================================= */
+.main-room {
+  width: 100%;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+  /* ========================================
+                サムネ写真
+    ======================================== */
+  /* ========================================
+                    部屋の説明
+    ======================================== */
+}
+
+.main-room .top__picture {
+  width: 100%;
+}
+
+.main-room .top__picture .top__thumb {
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+  width: 100%;
+  height: 580px;
+  font-size: 34px;
+  color: #FFFFFF;
+  padding-top: 313px;
+  text-align: center;
+  background-image: url(../img/oheya-header.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 80px;
+}
+
+.main-room .introduction {
+  width: 100%;
+}
+
+.main-room .introduction__inner {
+  max-width: 1180px;
+  height: auto;
+  margin: 0 auto;
+  /* ============================
+                    パンくずリスト
+            ============================ */
+  /* ========================================
+                            庭園付き客室
+            ======================================== */
+  /* ========================================
+                            一般客室
+            ======================================== */
+}
+
+.main-room .introduction__inner .breadcrumb__room {
+  margin: 36px 0 98px 0;
+}
+
+.main-room .introduction__inner .breadcrumb__room .breadcrumb__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-room .introduction__inner .breadcrumb__room .breadcrumb__list .breadcrumb__item:first-child::after {
+  content: '>';
+  display: inline-block;
+  padding: 0 5px;
+}
+
+@media (max-width: 767px) {
+  .main-room .introduction__inner .breadcrumb__room {
+    padding: 0 20px;
+    margin: 36px 0 60px 0;
+  }
+}
+
+.main-room .introduction__inner .introduction {
+  /* ========================================
+                                温泉付き客室   
+                ======================================== */
+}
+
+.main-room .introduction__inner .introduction__caption {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 78px;
+}
+
+@media (max-width: 767px) {
+  .main-room .introduction__inner .introduction__caption {
+    text-align: left;
+    padding: 0 20px;
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-bath {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 84px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-bath .introduction__thumb--with-bath {
+  width: 46%;
+  z-index: 10;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-bath .introduction__thumb--with-bath .introduction__img--with-bath {
+  width: 100%;
+  max-width: 525px;
+  max-height: 300px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath {
+  background-image: url(../img/bg.jpg);
+  margin: 57px auto 0 -158px;
+  min-height: 381px;
+  width: 68%;
+  max-width: 813px;
+  padding-top: 60px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath .introduction__title--with-bath {
+  font-size: 24px;
+  margin-left: 238px;
+  margin-bottom: 52px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath .introduction__text--with-bath {
+  font-size: 16px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath .introduction__text--with-bath:nth-of-type(1) {
+  line-height: 2;
+  margin-left: 238px;
+  margin-bottom: 52px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath .introduction__text--with-bath:nth-of-type(2) {
+  font-size: 14px;
+  margin-left: 244px;
+}
+
+@media (max-width: 767px) {
+  .main-room .introduction__inner .introduction__wrapper--with-bath {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-bath .introduction__thumb--with-bath {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-bath .introduction__thumb--with-bath .introduction__img--with-bath {
+    max-height: 390px;
+    height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: -390px;
+    width: 100%;
+    height: 390px;
+    max-width: 525px;
+    padding: 60px 20px;
+    z-index: 11;
+    color: white;
+    text-shadow: 1px 2px 3px #000000;
+    text-align: left;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath .introduction__title--with-bath {
+    margin-left: 0;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath .introduction__text--with-bath:nth-of-type(1) {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-bath .introduction__conditions--with-bath .introduction__text--with-bath:nth-of-type(2) {
+    margin-left: 0;
+  }
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-garden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 84px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden {
+  background-image: url(../img/bg.jpg);
+  margin: 57px -158px 0 auto;
+  min-height: 381px;
+  width: 69%;
+  max-width: 813px;
+  padding-top: 60px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden .introduction__title--with-garden {
+  font-size: 24px;
+  margin-left: 60px;
+  margin-bottom: 52px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden .introduction__text--with-garden {
+  font-size: 16px;
+  width: 55%;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden .introduction__text--with-garden:nth-of-type(1) {
+  line-height: 2;
+  margin-left: 60px;
+  margin-bottom: 52px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden .introduction__text--with-garden:nth-of-type(2) {
+  font-size: 14px;
+  margin-left: 60px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-garden .introduction__thumb--with-garden {
+  width: 44%;
+  z-index: 10;
+}
+
+.main-room .introduction__inner .introduction__wrapper--with-garden .introduction__thumb--with-garden .introduction__img--with-garden {
+  width: 100%;
+  max-width: 525px;
+  max-height: 300px;
+}
+
+@media (max-width: 767px) {
+  .main-room .introduction__inner .introduction__wrapper--with-garden {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 525px;
+    height: 390px;
+    padding: 60px 20px;
+    z-index: 11;
+    color: white;
+    text-shadow: 1px 2px 3px #000000;
+    text-align: left;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden .introduction__title--with-garden {
+    margin-left: 0;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden .introduction__text--with-garden {
+    width: 100%;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden .introduction__text--with-garden:nth-of-type(1) {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-garden .introduction__conditions--with-garden .introduction__text--with-garden:nth-of-type(2) {
+    margin-left: 0;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-garden .introduction__thumb--with-garden {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: -390px;
+  }
+  .main-room .introduction__inner .introduction__wrapper--with-garden .introduction__thumb--with-garden .introduction__img--with-garden {
+    max-height: 390px;
+    height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.main-room .introduction__inner .introduction__wrapper--basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.main-room .introduction__inner .introduction__wrapper--basic .introduction__thumb--basic {
+  width: 46%;
+  z-index: 10;
+}
+
+.main-room .introduction__inner .introduction__wrapper--basic .introduction__thumb--basic .introduction__img--basic {
+  width: 100%;
+  max-width: 525px;
+  max-height: 300px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic {
+  background-image: url(../img/bg.jpg);
+  margin: 57px auto 0 -158px;
+  min-height: 381px;
+  width: 68%;
+  max-width: 813px;
+  padding-top: 60px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic .introduction__title--basic {
+  font-size: 24px;
+  margin-left: 239px;
+  margin-bottom: 52px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic .introduction__text--basic {
+  font-size: 16px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic .introduction__text--basic:nth-of-type(1) {
+  line-height: 2;
+  margin-left: 238px;
+  margin-bottom: 52px;
+}
+
+.main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic .introduction__text--basic:nth-of-type(2) {
+  font-size: 14px;
+  margin-left: 238px;
+}
+
+@media (max-width: 767px) {
+  .main-room .introduction__inner .introduction__wrapper--basic {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .main-room .introduction__inner .introduction__wrapper--basic .introduction__thumb--basic {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .main-room .introduction__inner .introduction__wrapper--basic .introduction__thumb--basic .introduction__img--basic {
+    max-height: 390px;
+    height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: -390px;
+    width: 100%;
+    height: 390px;
+    max-width: 525px;
+    padding: 60px 20px;
+    z-index: 11;
+    color: white;
+    text-shadow: 1px 2px 3px #000000;
+    text-align: left;
+  }
+  .main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic .introduction__title--basic {
+    margin-left: 0;
+  }
+  .main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic .introduction__text--basic:nth-of-type(1) {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .main-room .introduction__inner .introduction__wrapper--basic .introduction__conditions--basic .introduction__text--basic:nth-of-type(2) {
+    margin-left: 0;
+  }
+}
+
+/* ========================================
+                フッター
+========================================= */
+.footer-room {
+  width: 100%;
+  margin-top: 150px;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+}
+
+.footer-room .footer__inner {
+  height: 522px;
+  margin: 0 auto;
+  background: url(../img/bg3.jpg) no-repeat;
+  background-size: cover;
+  padding: 64px 0 61px 0;
+}
+
+.footer-room .footer__inner .footer__nav {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-bottom: 96px;
+}
+
+.footer-room .footer__inner .footer__nav .footer__item {
+  margin-right: 34px;
+}
+
+.footer-room .footer__inner .footer__nav .footer__item:last-child {
+  margin-right: 0;
+}
+
+.footer-room .footer__inner .footer__logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-room .footer__inner .footer__logo .footer__img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-room .footer__inner .footer__title {
+  font-size: 32px;
+  font-family: "凸版文久見出し明朝","ToppanBunkyuMidashiMinchoStdN-ExtraBold",serif;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.footer-room .footer__inner .footer__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 23px;
+  font-size: 16px;
+}
+
+.footer-room .footer__inner .footer__location .footer__post-code {
+  margin-right: 21px;
+}
+
+.footer-room .footer__inner .footer__location .footer__address {
+  letter-spacing: 2.88px;
+}
+
+.footer-room .footer__inner .footer__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+}
+
+.footer-room .footer__inner .footer__number .footer__tel {
+  margin-right: 20px;
+}
+
+.footer-room .footer__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  margin: auto 0;
+  font-size: 12px;
+}
+
+@media (max-width: 767px) {
+  .footer-room {
+    margin-top: 5px;
+  }
+}
+
+/* ========================================
+            下層ページ（お料理）
+========================================= */
+/* ========================================
+                ヘッダー
+========================================= */
+.header-cooking {
+  width: 100%;
+  height: 80px;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 80px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 20;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+}
+
+.header-cooking .header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-cooking .header__inner .header__logo {
+  margin-right: 120px;
+}
+
+.header-cooking .header__inner .header__logo .header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-cooking .header__inner .header__logo .header__link .header__img {
+  margin: 20px 15px 20px 23px;
+  width: 100%;
+  max-width: 40px;
+}
+
+.header-cooking .header__inner .header__logo .header__link .header__title {
+  font-size: 32px;
+  font-family: "凸版文久見出し明朝","ToppanBunkyuMidashiMinchoStdN-ExtraBold",serif;
+  font-weight: 800;
+  color: #000000;
+  width: 100%;
+  max-width: 128px;
+}
+
+.header-cooking .header__inner .global-nav {
+  color: #000000;
+  font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .header-cooking .header__inner .global-nav {
+    font-size: 13px;
+  }
+}
+
+.header-cooking .header__inner .global-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-cooking .header__inner .global-nav__list .global-nav__item {
+  margin-right: 30px;
+}
+
+.header-cooking .btn__reserve {
+  color: #FFFFFF;
+  font-size: 16px;
+  width: 170px;
+  height: 54px;
+  margin: auto 20px;
+  line-height: 54px;
+  padding-left: 69px;
+  background: #978F10 url(../img/calender.png) no-repeat;
+  background-position: left 37px top 16px;
+  background-size: 22px;
+}
+
+.header-cooking .btn__js {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  width: 48px;
+  height: 48px;
+  z-index: 20;
+  border: none;
+  right: 0;
+}
+
+.header-cooking .btn__js .btn__line {
+  display: block;
+  position: relative;
+  width: 70%;
+  height: 2px;
+  background-color: #FFFFFF;
+  -webkit-transition: .2s;
+  transition: .2s;
+  top: 0px;
+  right: -5px;
+}
+
+.header-cooking .btn__js .btn__line::before, .header-cooking .btn__js .btn__line::after {
+  content: "";
+  position: absolute;
+  right: 0.5px;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+  margin-top: 3px;
+}
+
+.header-cooking .btn__js .btn__line::after {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+  margin-top: -3px;
+}
+
+.header-cooking .btn__js .btn__line.open {
+  background-color: transparent;
+}
+
+.header-cooking .btn__js .btn__line.open::before, .header-cooking .btn__js .open.btn__line::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: 0;
+  background-color: red;
+}
+
+.header-cooking .btn__js .btn__line.open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 0;
+  background-color: red !important;
+}
+
+@media (min-width: 768px) {
+  .header-cooking .btn__js {
+    display: none;
+  }
+}
+
+.header-cooking .btn__js .btn__line {
+  background-color: #000000;
+  top: 8px;
+}
+
+.header-cooking .btn__js .btn__line::before, .header-cooking .btn__js .btn__line::after {
+  background-color: #000000;
+}
+
+@media (max-width: 767px) {
+  .header-cooking {
+    display: block;
+  }
+  .header-cooking .header__inner {
+    display: block;
+    line-height: 80px;
+  }
+  .header-cooking .header__inner .header__logo {
+    margin-right: 0;
+  }
+  .header-cooking .header__inner .header__logo .header__link {
+    width: 50%;
+  }
+  .header-cooking .header__inner .header__logo .header__link .header__img {
+    margin: 20px 15px 20px 10px;
+  }
+  .header-cooking .header__inner .header__logo .header__link .header__title {
+    font-size: 23px;
+  }
+  .header-cooking .header__inner .global-nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .header-cooking .header__inner .global-nav.open {
+    right: 0px;
+    top: 0;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    padding-top: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .header-cooking .header__inner .global-nav.open .global-nav__list {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+  .header-cooking .header__inner .global-nav.open .global-nav__list .global-nav__item {
+    margin-right: 0;
+  }
+  .header-cooking .btn__reserve {
+    position: absolute;
+    right: 15%;
+    top: 25px;
+    width: 100px;
+    height: 35px;
+    margin: auto 10px;
+    line-height: 35px;
+    padding-left: 35px;
+    background-position: left 12px top 10px;
+    background-size: 16px;
+  }
+  .header-cooking .btn__reserve .btn__link {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+            メインビジュアル
+========================================= */
+.main-cooking {
+  width: 100%;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+  /* ========================================
+                サムネ写真
+    ======================================== */
+  /* ========================================
+                    料理の説明
+    ======================================== */
+}
+
+.main-cooking .top__picture {
+  width: 100%;
+}
+
+.main-cooking .top__picture .top__thumb {
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+  width: 100%;
+  height: 580px;
+  font-size: 34px;
+  color: #FFFFFF;
+  padding-top: 313px;
+  text-align: center;
+  background-image: url(../img/menu-header.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 80px;
+}
+
+@media (max-width: 767px) {
+  .main-cooking .top__picture .top__thumb {
+    background-size: auto;
+  }
+}
+
+.main-cooking .introduction {
+  width: 100%;
+}
+
+.main-cooking .introduction__inner {
+  max-width: 1180px;
+  height: auto;
+  margin: 0 auto;
+  /* ============================
+                    パンくずリスト
+            ============================ */
+}
+
+.main-cooking .introduction__inner .breadcrumb__cooking {
+  margin: 37px 0 97px 0;
+}
+
+.main-cooking .introduction__inner .breadcrumb__cooking .breadcrumb__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-cooking .introduction__inner .breadcrumb__cooking .breadcrumb__list .breadcrumb__item:first-child::after {
+  content: '>';
+  display: inline-block;
+  padding: 0 5px;
+}
+
+@media (max-width: 767px) {
+  .main-cooking .introduction__inner .breadcrumb__cooking {
+    padding: 0 20px;
+    margin: 36px 0 60px 0;
+  }
+}
+
+.main-cooking .introduction__inner .introduction {
+  /* ========================================
+                                 会席料理
+                ======================================== */
+  /* ========================================
+                                目利きの品
+                ======================================== */
+  /* ========================================
+                                一流の説明
+                ======================================== */
+}
+
+.main-cooking .introduction__inner .introduction__caption {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 78px;
+}
+
+@media (max-width: 767px) {
+  .main-cooking .introduction__inner .introduction__caption {
+    text-align: left;
+    padding: 0 20px;
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--ingredients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 84px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__thumb--ingredients {
+  width: 46%;
+  z-index: 10;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__thumb--ingredients .introduction__img--ingredients {
+  width: 100%;
+  max-width: 525px;
+  max-height: 300px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__conditions--ingredients {
+  background-image: url(../img/bg.jpg);
+  margin: 57px auto 0 -158px;
+  min-height: 381px;
+  width: 68%;
+  max-width: 813px;
+  padding-top: 60px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__conditions--ingredients .introduction__title--ingredients {
+  font-size: 24px;
+  margin-left: 238px;
+  margin-bottom: 52px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__conditions--ingredients .introduction__text--ingredients {
+  font-size: 16px;
+  line-height: 2;
+  margin-left: 238px;
+}
+
+@media (max-width: 767px) {
+  .main-cooking .introduction__inner .introduction__wrapper--ingredients {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__thumb--ingredients {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__thumb--ingredients .introduction__img--ingredients {
+    max-height: auto;
+    max-height: initial;
+    height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__conditions--ingredients {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: -390px;
+    width: 100%;
+    max-width: 525px;
+    padding: 60px 20px;
+    z-index: 11;
+    color: white;
+    text-shadow: 1px 2px 3px #000000;
+    height: 390px;
+    text-align: left;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__conditions--ingredients .introduction__title--ingredients {
+    margin-left: 0;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--ingredients .introduction__conditions--ingredients .introduction__text--ingredients {
+    margin-left: 0;
+  }
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--connoisseur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 84px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__conditions--connoisseur {
+  background-image: url(../img/bg.jpg);
+  margin: 57px -158px 0 auto;
+  min-height: 381px;
+  width: 69%;
+  max-width: 813px;
+  padding-top: 60px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__conditions--connoisseur .introduction__title--connoisseur {
+  font-size: 24px;
+  margin-left: 60px;
+  margin-bottom: 52px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__conditions--connoisseur .introduction__text--connoisseur {
+  font-size: 16px;
+  line-height: 2;
+  margin-left: 60px;
+  margin-bottom: 165px;
+  width: 59%;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__thumb--connoisseur {
+  width: 44%;
+  z-index: 10;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__thumb--connoisseur .introduction__img--connoisseur {
+  width: 100%;
+  max-width: 525px;
+  max-height: 300px;
+}
+
+@media (max-width: 767px) {
+  .main-cooking .introduction__inner .introduction__wrapper--connoisseur {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__conditions--connoisseur {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 525px;
+    padding: 60px 20px;
+    z-index: 11;
+    color: white;
+    text-shadow: 1px 2px 3px #000000;
+    height: 390px;
+    text-align: left;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__conditions--connoisseur .introduction__title--connoisseur {
+    margin-left: 0;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__conditions--connoisseur .introduction__text--connoisseur {
+    margin-left: 0;
+    width: 100%;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__thumb--connoisseur {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: -390px;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--connoisseur .introduction__thumb--connoisseur .introduction__img--connoisseur {
+    max-height: auto;
+    max-height: initial;
+    height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--top-notch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__thumb--top-notch {
+  width: 46%;
+  z-index: 10;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__thumb--top-notch .introduction__img--top-notch {
+  width: 100%;
+  max-width: 525px;
+  max-height: 300px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__conditions--top-notch {
+  background-image: url(../img/bg.jpg);
+  margin: 57px auto 0 -158px;
+  min-height: 381px;
+  width: 68%;
+  max-width: 813px;
+  padding-top: 60px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__conditions--top-notch .introduction__title--top-notch {
+  font-size: 24px;
+  margin-left: 239px;
+  margin-bottom: 52px;
+}
+
+.main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__conditions--top-notch .introduction__text--top-notch {
+  font-size: 16px;
+  line-height: 2;
+  margin-left: 238px;
+  margin-bottom: 52px;
+}
+
+@media (max-width: 767px) {
+  .main-cooking .introduction__inner .introduction__wrapper--top-notch {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__thumb--top-notch {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__thumb--top-notch .introduction__img--top-notch {
+    max-height: auto;
+    max-height: initial;
+    height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__conditions--top-notch {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: -390px;
+    max-width: 525px;
+    width: 100%;
+    padding: 60px 20px;
+    z-index: 11;
+    color: white;
+    text-shadow: 1px 2px 3px #000000;
+    height: 390px;
+    text-align: left;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__conditions--top-notch .introduction__title--top-notch {
+    margin-left: 0;
+  }
+  .main-cooking .introduction__inner .introduction__wrapper--top-notch .introduction__conditions--top-notch .introduction__text--top-notch {
+    margin-left: 0;
+  }
+}
+
+/* ========================================
+                フッター
+========================================= */
+.footer-cooking {
+  width: 100%;
+  margin-top: 150px;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+}
+
+.footer-cooking .footer__inner {
+  height: 522px;
+  margin: 0 auto;
+  background: url(../img/bg3.jpg) no-repeat;
+  background-size: cover;
+  padding: 64px 0 61px 0;
+}
+
+.footer-cooking .footer__inner .footer__nav {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-bottom: 96px;
+}
+
+.footer-cooking .footer__inner .footer__nav .footer__item {
+  margin-right: 34px;
+}
+
+.footer-cooking .footer__inner .footer__nav .footer__item:last-child {
+  margin-right: 0;
+}
+
+.footer-cooking .footer__inner .footer__logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-cooking .footer__inner .footer__logo .footer__img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-cooking .footer__inner .footer__title {
+  font-size: 32px;
+  font-family: "凸版文久見出し明朝","ToppanBunkyuMidashiMinchoStdN-ExtraBold",serif;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.footer-cooking .footer__inner .footer__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 23px;
+  font-size: 16px;
+}
+
+.footer-cooking .footer__inner .footer__location .footer__post-code {
+  margin-right: 21px;
+}
+
+.footer-cooking .footer__inner .footer__location .footer__address {
+  letter-spacing: 2.88px;
+}
+
+.footer-cooking .footer__inner .footer__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+}
+
+.footer-cooking .footer__inner .footer__number .footer__tel {
+  margin-right: 20px;
+}
+
+.footer-cooking .footer__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  margin: auto 0;
+  font-size: 12px;
+}
+
+@media (max-width: 767px) {
+  .footer-cooking {
+    margin-top: 5px;
+  }
+}
+
+/* ========================================
+            下層ページ（温泉）
+========================================= */
+/* ========================================
+                ヘッダー
+========================================= */
+.header-hot-spring {
+  width: 100%;
+  height: 80px;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 80px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 20;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+}
+
+.header-hot-spring .header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-hot-spring .header__inner .header__logo {
+  margin-right: 120px;
+}
+
+.header-hot-spring .header__inner .header__logo .header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-hot-spring .header__inner .header__logo .header__link .header__img {
+  margin: 20px 15px 20px 23px;
+}
+
+.header-hot-spring .header__inner .header__logo .header__link .header__title {
+  font-size: 32px;
+  font-family: "凸版文久見出し明朝","Toppan Bunkyu Midashi Mincho,ExtraBold",serif;
+  font-weight: 800;
+  color: #000000;
+}
+
+.header-hot-spring .header__inner .global-nav {
+  color: #000000;
+  font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .header-hot-spring .header__inner .global-nav {
+    font-size: 13px;
+  }
+}
+
+.header-hot-spring .header__inner .global-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-hot-spring .header__inner .global-nav__list .global-nav__item {
+  margin-right: 30px;
+}
+
+.header-hot-spring .btn__reserve {
+  color: #FFFFFF;
+  font-size: 16px;
+  width: 170px;
+  height: 54px;
+  margin: auto 20px;
+  line-height: 54px;
+  padding-left: 69px;
+  background: #978F10 url(../img/calender.png) no-repeat;
+  background-position: left 37px top 16px;
+  background-size: 22px;
+}
+
+.header-hot-spring .btn__js {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  width: 48px;
+  height: 48px;
+  z-index: 20;
+  border: none;
+  right: 0;
+}
+
+.header-hot-spring .btn__js .btn__line {
+  display: block;
+  position: relative;
+  width: 70%;
+  height: 2px;
+  background-color: #FFFFFF;
+  -webkit-transition: .2s;
+  transition: .2s;
+  top: 0px;
+  right: -5px;
+}
+
+.header-hot-spring .btn__js .btn__line::before, .header-hot-spring .btn__js .btn__line::after {
+  content: "";
+  position: absolute;
+  right: 0.5px;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+  margin-top: 3px;
+}
+
+.header-hot-spring .btn__js .btn__line::after {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+  margin-top: -3px;
+}
+
+.header-hot-spring .btn__js .btn__line.open {
+  background-color: transparent;
+}
+
+.header-hot-spring .btn__js .btn__line.open::before, .header-hot-spring .btn__js .open.btn__line::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: 0;
+  background-color: red;
+}
+
+.header-hot-spring .btn__js .btn__line.open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 0;
+  background-color: red !important;
+}
+
+@media (min-width: 768px) {
+  .header-hot-spring .btn__js {
+    display: none;
+  }
+}
+
+.header-hot-spring .btn__js .btn__line {
+  background-color: #000000;
+  top: 8px;
+}
+
+.header-hot-spring .btn__js .btn__line::before, .header-hot-spring .btn__js .btn__line::after {
+  background-color: #000000;
+}
+
+@media (max-width: 767px) {
+  .header-hot-spring {
+    display: block;
+  }
+  .header-hot-spring .header__inner {
+    display: block;
+    line-height: 80px;
+  }
+  .header-hot-spring .header__inner .header__logo {
+    margin-right: 0;
+  }
+  .header-hot-spring .header__inner .header__logo .header__link {
+    width: 50%;
+  }
+  .header-hot-spring .header__inner .header__logo .header__link .header__img {
+    margin: 20px 15px 20px 10px;
+  }
+  .header-hot-spring .header__inner .header__logo .header__link .header__title {
+    font-size: 23px;
+  }
+  .header-hot-spring .header__inner .global-nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .header-hot-spring .header__inner .global-nav.open {
+    right: 0px;
+    top: 0;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    padding-top: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .header-hot-spring .header__inner .global-nav.open .global-nav__list {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+  .header-hot-spring .header__inner .global-nav.open .global-nav__list .global-nav__item {
+    margin-right: 0;
+  }
+  .header-hot-spring .btn__reserve {
+    position: absolute;
+    right: 15%;
+    top: 25px;
+    width: 100px;
+    height: 35px;
+    margin: auto 10px;
+    line-height: 35px;
+    padding-left: 35px;
+    background-position: left 12px top 10px;
+    background-size: 16px;
+  }
+  .header-hot-spring .btn__reserve .btn__link {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+            メインビジュアル
+========================================= */
+.main-hot-spring {
+  width: 100%;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+  /* ========================================
+                サムネ写真
+    ======================================== */
+  /* ========================================
+                    温泉の説明
+    ======================================== */
+  /* ========================================
+                    温泉の効能
+    ======================================== */
+}
+
+.main-hot-spring .top__picture {
+  width: 100%;
+}
+
+.main-hot-spring .top__picture .top__thumb {
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 800;
+  width: 100%;
+  height: 580px;
+  font-size: 34px;
+  color: #FFFFFF;
+  padding-top: 313px;
+  text-align: center;
+  background-image: url(../img/onsen-header.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 80px;
+}
+
+@media (max-width: 767px) {
+  .main-hot-spring .top__picture .top__thumb {
+    background-size: auto;
+  }
+}
+
+.main-hot-spring .introduction {
+  width: 100%;
+  margin-bottom: 156.5px;
+}
+
+.main-hot-spring .introduction__inner {
+  max-width: 1180px;
+  height: auto;
+  margin: 0 auto;
+  /* ============================
+                    パンくずリスト
+            ============================ */
+}
+
+.main-hot-spring .introduction__inner .breadcrumb__hot-spring {
+  margin: 37px 0 97px 0;
+}
+
+.main-hot-spring .introduction__inner .breadcrumb__hot-spring .breadcrumb__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-hot-spring .introduction__inner .breadcrumb__hot-spring .breadcrumb__list .breadcrumb__item:first-child::after {
+  content: '>';
+  display: inline-block;
+  padding: 0 5px;
+}
+
+@media (max-width: 767px) {
+  .main-hot-spring .introduction__inner .breadcrumb__hot-spring {
+    padding: 0 20px;
+    margin: 36px 0 60px 0;
+  }
+}
+
+.main-hot-spring .introduction__inner .introduction {
+  /* ========================================
+                            貸し切り露天風呂
+                ======================================== */
+  /* ========================================
+                                硫黄泉
+                ======================================== */
+}
+
+.main-hot-spring .introduction__inner .introduction__caption {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 78px;
+}
+
+@media (max-width: 767px) {
+  .main-hot-spring .introduction__inner .introduction__caption {
+    text-align: left;
+    padding: 0 20px;
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 84px;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__thumb--open-air-bath {
+  width: 46%;
+  z-index: 10;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__thumb--open-air-bath .introduction__img--open-air-bath {
+  width: 100%;
+  max-width: 525px;
+  max-height: 300px;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__conditions--open-air-bath {
+  background-image: url(../img/bg.jpg);
+  margin: 57px auto 0 -158px;
+  min-height: 381px;
+  width: 68%;
+  max-width: 813px;
+  padding-top: 60px;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__conditions--open-air-bath .introduction__title--open-air-bath {
+  font-size: 24px;
+  margin-left: 238px;
+  margin-bottom: 52px;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__conditions--open-air-bath .introduction__text--open-air-bath {
+  font-size: 16px;
+  line-height: 2;
+  margin-left: 238px;
+}
+
+@media (max-width: 767px) {
+  .main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__thumb--open-air-bath {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__thumb--open-air-bath .introduction__img--open-air-bath {
+    max-height: auto;
+    max-height: initial;
+    height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__conditions--open-air-bath {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: -390px;
+    width: 100%;
+    max-width: 525px;
+    padding: 60px 20px;
+    z-index: 11;
+    color: white;
+    text-shadow: 1px 2px 3px #000000;
+    height: 390px;
+    text-align: left;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__conditions--open-air-bath .introduction__title--open-air-bath {
+    margin-left: 0;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--open-air-bath .introduction__conditions--open-air-bath .introduction__text--open-air-bath {
+    margin-left: 0;
+  }
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--sulfur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 84px;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__conditions--sulfur {
+  background-image: url(../img/bg.jpg);
+  margin: 57px -158px 0 auto;
+  min-height: 381px;
+  width: 69%;
+  max-width: 813px;
+  padding-top: 60px;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__conditions--sulfur .introduction__title--sulfur {
+  font-size: 24px;
+  margin-left: 60px;
+  margin-bottom: 52px;
+  width: 55%;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__conditions--sulfur .introduction__text--sulfur {
+  font-size: 16px;
+  line-height: 2;
+  margin-left: 60px;
+  margin-bottom: 165px;
+  width: 67%;
+}
+
+@media (min-width: 1000px) {
+  .main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__conditions--sulfur .introduction__text--sulfur .tablet {
+    display: none;
+  }
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__thumb--sulfur {
+  width: 44%;
+  z-index: 10;
+}
+
+.main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__thumb--sulfur .introduction__img--sulfur {
+  width: 100%;
+  max-width: 525px;
+  max-height: 300px;
+}
+
+@media (max-width: 767px) {
+  .main-hot-spring .introduction__inner .introduction__wrapper--sulfur {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__conditions--sulfur {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 525px;
+    padding: 60px 20px;
+    z-index: 11;
+    color: white;
+    text-shadow: 1px 2px 3px #000000;
+    height: 390px;
+    text-align: left;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__conditions--sulfur .introduction__title--sulfur {
+    margin-left: 0;
+    width: 100%;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__conditions--sulfur .introduction__text--sulfur {
+    margin-left: 0;
+    width: 100%;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__thumb--sulfur {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: -390px;
+  }
+  .main-hot-spring .introduction__inner .introduction__wrapper--sulfur .introduction__thumb--sulfur .introduction__img--sulfur {
+    max-height: auto;
+    max-height: initial;
+    height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-hot-spring .introduction {
+    margin-bottom: 5px;
+  }
+}
+
+.main-hot-spring .effect {
+  width: 100%;
+}
+
+.main-hot-spring .effect__inner {
+  max-width: 1180px;
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+  margin: 0 auto;
+  padding-top: 95.5px;
+}
+
+.main-hot-spring .effect__inner .effect__title {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 69px;
+}
+
+.main-hot-spring .effect__inner .effect__list {
+  max-width: 880px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+.main-hot-spring .effect__inner .effect__list .effect__wrapper {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 17.5px 0;
+  border-top: 1px solid #E7E7E7;
+}
+
+.main-hot-spring .effect__inner .effect__list .effect__wrapper .effect__term {
+  margin-right: 190px;
+}
+
+.main-hot-spring .effect__inner .effect__list .effect__wrapper:nth-of-type(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 74px;
+  border-bottom: 1px solid #E7E7E7;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.main-hot-spring .effect__inner .effect__list .effect__wrapper:nth-of-type(3) .effect__term {
+  margin-right: 160px;
+  width: 9%;
+}
+
+.main-hot-spring .effect__inner .effect__list .effect__wrapper:nth-of-type(3) .effect__description {
+  width: 99%;
+}
+
+@media (max-width: 767px) {
+  .main-hot-spring .effect__inner {
+    padding-top: 15px;
+  }
+  .main-hot-spring .effect__inner .effect__title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .main-hot-spring .effect__inner .effect__list {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+  .main-hot-spring .effect__inner .effect__list .effect__wrapper {
+    padding: 15px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-hot-spring .effect__inner .effect__list .effect__wrapper .effect__term {
+    margin-right: 0;
+    width: 30%;
+  }
+  .main-hot-spring .effect__inner .effect__list .effect__wrapper .effect__description {
+    font-size: 12px;
+    width: 70%;
+  }
+  .main-hot-spring .effect__inner .effect__list .effect__wrapper:nth-of-type(3) {
+    margin-bottom: 40px;
+  }
+  .main-hot-spring .effect__inner .effect__list .effect__wrapper:nth-of-type(3) .effect__term {
+    margin-right: 0;
+    width: 30%;
+  }
+  .main-hot-spring .effect__inner .effect__list .effect__wrapper:nth-of-type(3) .effect__description {
+    width: 70%;
+  }
+}
+
+/* ========================================
+                フッター
+========================================= */
+.footer-hot-spring {
+  width: 100%;
+  margin-top: 96.5px;
+  font-family: "游明朝","Yu Mincho",serif;
+  font-weight: 500;
+}
+
+.footer-hot-spring .footer__inner {
+  height: 522px;
+  margin: 0 auto;
+  background: url(../img/bg3.jpg) no-repeat;
+  background-size: cover;
+  padding: 64px 0 61px 0;
+}
+
+.footer-hot-spring .footer__inner .footer__nav {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-bottom: 96px;
+}
+
+.footer-hot-spring .footer__inner .footer__nav .footer__item {
+  margin-right: 34px;
+}
+
+.footer-hot-spring .footer__inner .footer__nav .footer__item:last-child {
+  margin-right: 0;
+}
+
+.footer-hot-spring .footer__inner .footer__logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-hot-spring .footer__inner .footer__logo .footer__img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-hot-spring .footer__inner .footer__title {
+  font-size: 32px;
+  font-family: "凸版文久見出し明朝","ToppanBunkyuMidashiMinchoStdN-ExtraBold",serif;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.footer-hot-spring .footer__inner .footer__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 23px;
+  font-size: 16px;
+}
+
+.footer-hot-spring .footer__inner .footer__location .footer__post-code {
+  margin-right: 21px;
+}
+
+.footer-hot-spring .footer__inner .footer__location .footer__address {
+  letter-spacing: 2.88px;
+}
+
+.footer-hot-spring .footer__inner .footer__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+}
+
+.footer-hot-spring .footer__inner .footer__number .footer__tel {
+  margin-right: 20px;
+}
+
+.footer-hot-spring .footer__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  margin: auto 0;
+  font-size: 12px;
+}
+
+@media (max-width: 767px) {
+  .footer-hot-spring {
+    margin-top: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
