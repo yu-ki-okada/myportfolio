@@ -1,0 +1,522 @@
+/**
+*  Template Name: Kelvin
+*  Template URL: https://templatemag.com/kelvin-bootstrap-resume-template/
+*  Author: TemplateMag.com
+*  License: https://templatemag.com/license/
+*/
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway";
+  font-weight: 300;
+  color: #333;
+}
+
+/* Paragraph & Typographic */
+
+p {
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+.centered {
+  text-align: center;
+}
+
+/* Links */
+
+a {
+  color: #1abc9c;
+  word-wrap: break-word;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover, a:focus {
+  color: #7b7b7b;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:before, a:after {
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*---------------------------------------------------
+3.1 Topbar
+---------------------------------------------------*/
+
+#section-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  overflow: visible;
+  font: normal 16px/24px 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#section-topbar a {
+  color: #fff;
+}
+
+#topbar-inner {
+  background: #111;
+  line-height: 0;
+  text-align: center;
+}
+
+/*
+Top Bar
+
+By default, top navigation bar uses "fixed" position
+*/
+
+#section-topbar ul#nav {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid #222;
+  /* For IE, the outcast */
+  zoom: 1;
+  *display: inline;
+}
+
+#section-topbar ul#nav>li {
+  display: block;
+  float: left;
+  padding: 0;
+}
+
+#section-topbar ul#nav a {
+  display: block;
+  font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  padding: 18px 20px 18px 20px;
+  border-left: 1px solid #222;
+}
+
+#section-topbar ul#nav a:focus {
+  background: #111;
+  text-decoration: none;
+  border-left: 1px solid #111;
+}
+
+#section-topbar ul#nav a:hover {
+  background: #222;
+  text-decoration: none;
+  border-left: 1px solid #111;
+}
+
+#section-topbar ul#nav .active a {
+  background: #44bbaa;
+  border-left: 1px solid #111;
+}
+
+#section-topbar ul#nav .active a:hover {
+  background: #44bbaa;
+}
+
+#section-topbar i {
+  font-size: 25px;
+}
+
+/*---------------------------------------------------
+SECTION WRAPS
+---------------------------------------------------*/
+
+/* Header Wrap */
+
+#headerwrap {
+  background: url(../img/header-bg2.png) no-repeat center top;
+  margin-top: 60px;
+  padding-top: 140px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 500px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#headerwrap h1 {
+  font-size: 80px;
+  color: white;
+}
+
+#headerwrap h3 {
+  font-size: 20px;
+  color: white;
+}
+
+/* Intnro Wrap */
+
+#intro {
+  background: #2c3e50;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+}
+
+#intro h5, p {
+  color: white;
+}
+
+#intro i {
+  color: white;
+  font-size: 20px;
+  padding-right: 8px;
+  vertical-align: middle;
+}
+
+#skillswrap {
+  background: #2c3e50;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+}
+
+#skillswrap h5, p {
+  color: white;
+}
+
+.logo__ps {
+  width: 80px;
+  background-color: white;
+}
+
+.logo__ai {
+  width: 80px;
+  background-color: white;
+}
+
+.pop__open {
+  cursor:pointer; /* マウスオーバーでカーソルの形状を変えることで、クリックできる要素だとわかりやすいように */
+}
+
+#pop-up__a , #pop-up__b {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+#pop-up__a:checked + .overlay , #pop-up__b:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+.window {
+	width: 70%;
+	height: 100%;
+	background-color: #ffffff;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  z-index: 10001;
+  font-family: "Yu Mincho","游明朝","YuMincho","游明朝体",serif;
+}
+
+@media (max-width: 767px) {
+  .window {
+    width: 95%;
+  }
+}
+.window__content {
+	font-size: 18px;
+	margin: 0;
+  width: 90%;
+  height: 78%;
+  text-align: center;
+}
+
+.window__img--a {
+  background-image: url(../img/port-1.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.window__img--b {
+  background-image: url(../img/port-2.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+@media (max-width: 1200px) {
+  .window__img {
+    background-size: 150%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .window__img {
+    height: 65%;
+  }
+}
+
+.window__title {
+  font-family: "Yu Mincho","游明朝","YuMincho","游明朝体",serif;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 35px;
+}
+
+.window__close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 20px;
+	font-size: 50px;
+}
+
+.window__text {
+  margin: 0;
+  margin-top: 40px;
+}
+
+.window__key--user {
+  margin: 0;
+}
+
+.btn__back {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  margin: 15px 0;
+}
+
+
+#footwrap {
+  background: #2f2f2f;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#footwrap p {
+  color: white;
+}
+
+#footwrap h5 {
+  color: white;
+}
+
+.contact__list {
+  text-align: center;
+  width: 100%;
+}
+
+#footwrap t {
+  font-weight: 700;
+}
+
+#footwrap i {
+  padding-right: 8px;
+  color: #1abc9c;
+}
+
+
+/* Copyright Wrap */
+
+#copyrights {
+  background: #222222;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+#copyrights p {
+  margin: 0 0 5px 0;
+}
+
+.credits {
+  color: #999;
+}
+
+/* Global Values */
+
+.desc {
+  padding-top: 50px;
+}
+
+.desc p {
+  color: #2f2f2f;
+}
+
+.desc t {
+  color: #34495e;
+  font-weight: 700;
+}
+
+.desc imp {
+  padding: 6px;
+  color: white;
+  background: #34495e;
+}
+
+.desc more {
+  color: #95a5a6;
+}
+
+sm {
+  font-size: 12px;
+}
+
+/* Contact Form */
+
+.contact-form label {
+  color: #999;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px 12px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  height: auto;
+}
+
+.contact-form .form-send {
+  text-align: center;
+}
+
+.contact-form .form-send button {
+  background: #44bbaa;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.contact-form .form-send button:hover {
+  background: #23c8b1;
+}
+
+.contact-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact-form .loading {
+  display: none;
+  color: #555;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.contact-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.contact-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.contact-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin: 15px 0;
+}
