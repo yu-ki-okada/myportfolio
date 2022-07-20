@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>My Portfolio</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="robots" content="noindex">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
@@ -65,7 +66,9 @@
       <div class="row centered">
         <div class="col-lg-12">
           <h1>Yuki Okada</h1>
-          <h3>fd_3s_777@yahoo.co.jp</h3>
+          <h3>
+            <a href="m&#97;i&#108;t&#111;:f&#100;&#95;3s&#95;&#55;77&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#46;&#106;p">f&#100;&#95;3s&#95;&#55;77&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#46;&#106;p</a>
+          </h3>
         </div>
         <!--/.col-lg-12 -->
       </div>
@@ -287,7 +290,7 @@
           <!-- <canvas id="photoshop" height="130" width="130"></canvas> -->
           <img class="logo__ps" src="./img/logops.png" alt="ps">
           <p>Photoshop</p>
-          <p>もともとはコーディングメインでしたが、デザインも出来たらなおよいと思い、後半から学び始めました。
+          <p>もともとはコーディングメインでしたが、デザインも出来たら尚良いと思い、後半から学び始めました。
             現在も使いながら勉強中です。
           </p>
         </div>
@@ -295,7 +298,7 @@
           <!-- <canvas id="illustrator" height="130" width="130"></canvas> -->
           <img class="logo__ai" src="./img/logoai.png" alt="ai">
           <p>Illustrator</p>
-          <p>Photoshopと同時に学び始め、現在も使いながら勉強中です。</p>
+          <p>Photoshopと同時に学び始め、現在も使用しながら勉強中です。</p>
         </div>
 
       </div>
@@ -422,11 +425,63 @@
 
 
 
-
-
-
-
         <div class="col-lg-6 col-lg-offset-3">
+          <label class="pop__open" for="pop-up__c">
+            <p><img class="img-responsive" src="img/portthree.png" alt=""></p>
+          </label>
+          <input type="checkbox" id="pop-up__c">
+          <div class="overlay">
+            <div class="window">
+              <label class="window__close" for="pop-up__c">×</label>
+              <div class="window__content">
+                <a href="https://original.sakura.ne.jp/cording-portfolio/" class="window__link--img" target="_blank">
+                  <div class="window__img window__img--c"></div>
+                </a>
+                <h5 class="window__title">栃木県宇都宮市の美容室の公式ホームページ【mUku】</h5>
+                <dl class="window__list">
+                  <dt class="window__term">担当部分</dt>
+                  <dd class="window__description">デザイン・コーディング</dd>
+                </dl>
+                <dl class="window__list">
+                  <dt class="window__term">制作時間</dt>
+                  <dd class="window__description">デザイン：1週間</dd>
+                  <dd class="window__description">コーディング：9日間</dd>
+                </dl>
+                <dl class="window__list">
+                  <dt class="window__term">コメント</dt>
+                  <dd class="window__description">デザインから担当し、コーディングを行いました。元からあるHotpepperbeautyのページへ誘導したいので、ページをリンクさせ、Topページとアクセス詳細のページの2ページを制作しました。
+                    打合せにて白を基調としたホームページを希望されていたので、派手過ぎない色使いに気を付けデザインしました。手書き風イラストを入れたかったので、Adobe illustratorでロゴを作成しました。拡大してフェードするスライダーをご希望でしたのでファーストビューはSWIPERを使用しました。
+                    ハンバーガーメニューにjQueryを使用し、ふわっとリンク先へ移動させるため、aos.jsを使用し実装致しました。構造化マークアップでパンくずリストは作成してあります。
+                  </dd>
+                </dl>
+                <p class="window__text">サイトへ：<a class="windou__link--text" href="https://original.sakura.ne.jp/cording-portfolio/" target="_blank">https://original.sakura.ne.jp/cording-portfolio/</a></p>
+                <div class="window__key">
+                  <p class="window__key--user">ユーザー名:yuki</p>
+                  <p class="window__key--pass">パスワード:060203</p>
+                </div>
+                <a class="window__git" href="https://github.com/yu-ki-okada/muku_beautysalon" target="_blank">GitHub</a>
+                <label class="btn__back" for="pop-up__c">戻る</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <p>栃木県宇都宮市の美容室の公式ホームページ【mUku】</p>
+          <p>
+            <more>打合せ後、Adobe PhotoShopでワイヤーフレーム、デザインカンプを作成し、コーディング致しました。<br/><br/>
+              <sm><i class="icon-tag"></i> デザイン・コーディング</sm>
+            </more>
+            <br>
+            <br>
+            <a class="git__link" href="https://github.com/yu-ki-okada/muku_beautysalon" target="_blank">GitHub</a>
+          </p>
+        </div>        
+
+
+
+
+
+        <!-- <div class="col-lg-6 col-lg-offset-3">
           <p><img class="img-responsive" src="img/port03.jpg" alt=""></p>
         </div>
         <div class="col-lg-3">
@@ -436,7 +491,7 @@
               <sm><i class="icon-tag"></i> web design</sm>
             </more>
           </p>
-        </div>
+        </div> -->
 
       </div>
       <!--/.row -->
@@ -457,7 +512,8 @@
           </div>
           <div class="col-lg-4 contact__list">
             <p>
-              <t>Email</t><br/> contact@example.com <br/>
+              <t>Email</t><br/> <a href="m&#97;i&#108;t&#111;:f&#100;&#95;3s&#95;&#55;77&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#46;&#106;p">f&#100;&#95;3s&#95;&#55;77&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#46;&#106;p</a>
+              <br/>
             </p>
             <p>
               <t>Adress</t><br/> Some Ave. 987 <br/> Postal 23892 <br/> London, England. <br/>

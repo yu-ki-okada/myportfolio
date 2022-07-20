@@ -156,12 +156,12 @@ SECTION WRAPS
 /* Header Wrap */
 
 #headerwrap {
-  background: url(../img/header-bg2.png) no-repeat center top;
+  background: url(../img/header-bg-2.png) no-repeat center top;
   margin-top: 60px;
   padding-top: 140px;
   text-align: center;
   background-attachment: relative;
-  background-position: center center;
+  background-position: center 35%;
   min-height: 500px;
   width: 100%;
   -webkit-background-size: 100%;
@@ -229,14 +229,14 @@ SECTION WRAPS
   cursor:pointer; /* マウスオーバーでカーソルの形状を変えることで、クリックできる要素だとわかりやすいように */
 }
 
-#pop-up__a , #pop-up__b {
+#pop-up__a , #pop-up__b , #pop-up__c {
 	display: none; /* label でコントロールするので input は非表示に */
 }
 
 .overlay {
 	display: none; /* input にチェックが入るまでは非表示に */
 }
-#pop-up__a:checked + .overlay , #pop-up__b:checked + .overlay {
+#pop-up__a:checked + .overlay , #pop-up__b:checked + .overlay , #pop-up__c:checked + .overlay {
 	display: block;
 	z-index: 9999;
 	background-color: #00000070;
@@ -287,6 +287,15 @@ SECTION WRAPS
 
 .window__img--b {
   background-image: url(../img/port-2.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.window__img--c {
+  background-image: url(../img/port-3.png);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
